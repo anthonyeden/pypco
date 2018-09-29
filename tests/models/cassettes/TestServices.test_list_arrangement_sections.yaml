@@ -1,0 +1,189 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: https://api.planningcenteronline.com/services/v2/songs/16194010
+  response:
+    body: {string: '{"data":{"type":"Song","id":"16194010","attributes":{"admin":"Ardent
+        Music LLC","author":"Todd Agnew, Chris Collins, Edwin O. Excell, and John
+        Newton","ccli_number":3689877,"copyright":"2003 Ardent/Koala Music","created_at":"2018-09-25T10:47:19Z","hidden":false,"last_scheduled_at":null,"themes":",
+        Cleansing, God''s Attributes, Grace, Praise, Salvation","title":"Grace Like
+        Rain","updated_at":"2018-09-25T10:49:06Z"},"links":{"arrangements":"https://api.planningcenteronline.com/services/v2/songs/16194010/arrangements","assign_tags":"https://api.planningcenteronline.com/services/v2/songs/16194010/assign_tags","attachments":"https://api.planningcenteronline.com/services/v2/songs/16194010/attachments","last_scheduled_item":"https://api.planningcenteronline.com/services/v2/songs/16194010/last_scheduled_item","song_schedules":"https://api.planningcenteronline.com/services/v2/songs/16194010/song_schedules","tags":"https://api.planningcenteronline.com/services/v2/songs/16194010/tags","self":"https://api.planningcenteronline.com/services/v2/songs/16194010"}},"included":[],"meta":{"parent":{"id":"263468","type":"Organization"}}}'}
+    headers:
+      Access-Control-Allow-Credentials: ['true']
+      Access-Control-Allow-Headers: ['Accept, Authorization, Content-Type, If-Match,
+          If-Modified-Since, If-None-Match, If-Unmodified-Since, Origin, X-Requested-With,
+          X-CSRF-Token']
+      Access-Control-Allow-Methods: ['GET, POST, PATCH, PUT, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Expose-Headers: ['ETag, Link, X-PCO-API-Auth-Method']
+      Cache-Control: ['max-age=0, private, must-revalidate']
+      Connection: [keep-alive]
+      Content-Length: ['1133']
+      Content-Type: [application/vnd.api+json; charset=utf-8]
+      Date: ['Sat, 29 Sep 2018 12:56:20 GMT']
+      ETag: [W/"8187c8d6b7b1b612e89407df444a439b"]
+      Server: [nginx]
+      Strict-Transport-Security: [max-age=15552000]
+      Vary: ['Accept, Accept-Encoding, Origin']
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN]
+      X-PCO-API-Auth-Method: [HTTPBasic]
+      X-PCO-API-Request-Rate-Count: ['1']
+      X-PCO-API-Request-Rate-Limit: ['100']
+      X-PCO-API-Request-Rate-Period: [20 seconds]
+      X-Pco-Api-Processed-As-Version: ['2018-08-01']
+      X-Request-Id: [5fdbf310-3cec-48fa-ac4d-c9326acbe1fd]
+      X-Runtime: ['0.109869']
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: https://api.planningcenteronline.com/services/v2/songs/16194010/arrangements
+  response:
+    body: {string: '{"links":{"self":"https://api.planningcenteronline.com/services/v2/songs/16194010/arrangements"},"data":[{"type":"Arrangement","id":"18435232","attributes":{"archived_at":null,"bpm":120,"chord_chart":"VERSE
+        1\r\n\r\n[Dm]This is a test [Bb]This is another test\r\n[F]This is another
+        test [C]This is the final test\r\n[Dm]Test some more lyrics [Bb]Test even
+        more lyrics\r\n[F]These are lyrics [C]I like these lyrics!\r\n\r\nINSTRUMENTAL\r\n\r\n[Dm]
+        [Bb] [F] [C]\r\nVERSE 2\r\n\r\n[Dm]I like these lyrics [Bb]They are great
+        lyrics\r\n[F]Everyone should sing them [C]Yeeeaaahhh!","chord_chart_chord_color":0,"chord_chart_columns":1,"chord_chart_font":"Courier","chord_chart_font_size":12,"chord_chart_key":"Dm","created_at":"2018-09-25T10:47:19Z","has_chord_chart":true,"has_chords":true,"length":180,"lyrics":"VERSE
+        1\n\nThis is a test This is another test\nThis is another test This is the
+        final test\nTest some more lyrics Test even more lyrics\nThese are lyrics
+        I like these lyrics!\n\nINSTRUMENTAL\n\nVERSE 2\n\nI like these lyrics They
+        are great lyrics\nEveryone should sing them Yeeeaaahhh!","lyrics_enabled":true,"meter":"3/4","name":"Default
+        Arrangement","notes":"Some test notes!","number_chart_enabled":false,"numeral_chart_enabled":false,"print_margin":"0.5in","print_orientation":"Portrait","print_page_size":"Letter","sequence":["Verse
+        1","Instrumental","Verse 2","Instrumental"],"sequence_short":["V1","Inst","V2","Inst"],"updated_at":"2018-09-29T11:26:38Z"},"relationships":{"updated_by":{"data":{"type":"Person","id":"40135868"}},"created_by":{"data":{"type":"Person","id":"40135868"}},"song":{"data":{"type":"Song","id":"16194010"}}},"links":{"self":"https://api.planningcenteronline.com/services/v2/songs/16194010/arrangements/18435232"}},{"type":"Arrangement","id":"18435234","attributes":{"archived_at":null,"bpm":120,"chord_chart":null,"chord_chart_chord_color":0,"chord_chart_columns":1,"chord_chart_font":"Courier","chord_chart_font_size":12,"chord_chart_key":null,"created_at":"2018-09-25T10:47:49Z","has_chord_chart":false,"has_chords":false,"length":180,"lyrics":null,"lyrics_enabled":true,"meter":"3/4","name":"Test
+        Arrangement","notes":null,"number_chart_enabled":false,"numeral_chart_enabled":false,"print_margin":"0.5in","print_orientation":"Portrait","print_page_size":"Letter","sequence":[],"sequence_short":[],"updated_at":"2018-09-25T10:49:06Z"},"relationships":{"updated_by":{"data":{"type":"Person","id":"40135868"}},"created_by":{"data":{"type":"Person","id":"40135868"}},"song":{"data":{"type":"Song","id":"16194010"}}},"links":{"self":"https://api.planningcenteronline.com/services/v2/songs/16194010/arrangements/18435234"}}],"included":[],"meta":{"total_count":2,"count":2,"can_include":["sections"],"parent":{"id":"16194010","type":"Song"}}}'}
+    headers:
+      Access-Control-Allow-Credentials: ['true']
+      Access-Control-Allow-Headers: ['Accept, Authorization, Content-Type, If-Match,
+          If-Modified-Since, If-None-Match, If-Unmodified-Since, Origin, X-Requested-With,
+          X-CSRF-Token']
+      Access-Control-Allow-Methods: ['GET, POST, PATCH, PUT, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Expose-Headers: ['ETag, Link, X-PCO-API-Auth-Method']
+      Cache-Control: ['max-age=0, private, must-revalidate']
+      Connection: [keep-alive]
+      Content-Length: ['2779']
+      Content-Type: [application/vnd.api+json; charset=utf-8]
+      Date: ['Sat, 29 Sep 2018 12:56:20 GMT']
+      ETag: [W/"6d50ebfc104ef556a0de4633fe3c0076"]
+      Server: [nginx]
+      Strict-Transport-Security: [max-age=15552000]
+      Vary: ['Accept, Accept-Encoding, Origin']
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN]
+      X-PCO-API-Auth-Method: [HTTPBasic]
+      X-PCO-API-Request-Rate-Count: ['2']
+      X-PCO-API-Request-Rate-Limit: ['100']
+      X-PCO-API-Request-Rate-Period: [20 seconds]
+      X-Pco-Api-Processed-As-Version: ['2018-08-01']
+      X-Request-Id: [255ee7d3-df3c-40d9-a296-2d75dafb3787]
+      X-Runtime: ['0.122642']
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: https://api.planningcenteronline.com/services/v2/songs/16194010/arrangements/18435232
+  response:
+    body: {string: '{"data":{"type":"Arrangement","id":"18435232","attributes":{"archived_at":null,"bpm":120,"chord_chart":"VERSE
+        1\r\n\r\n[Dm]This is a test [Bb]This is another test\r\n[F]This is another
+        test [C]This is the final test\r\n[Dm]Test some more lyrics [Bb]Test even
+        more lyrics\r\n[F]These are lyrics [C]I like these lyrics!\r\n\r\nINSTRUMENTAL\r\n\r\n[Dm]
+        [Bb] [F] [C]\r\nVERSE 2\r\n\r\n[Dm]I like these lyrics [Bb]They are great
+        lyrics\r\n[F]Everyone should sing them [C]Yeeeaaahhh!","chord_chart_chord_color":0,"chord_chart_columns":1,"chord_chart_font":"Courier","chord_chart_font_size":12,"chord_chart_key":"Dm","created_at":"2018-09-25T10:47:19Z","has_chord_chart":true,"has_chords":true,"length":180,"lyrics":"VERSE
+        1\n\nThis is a test This is another test\nThis is another test This is the
+        final test\nTest some more lyrics Test even more lyrics\nThese are lyrics
+        I like these lyrics!\n\nINSTRUMENTAL\n\nVERSE 2\n\nI like these lyrics They
+        are great lyrics\nEveryone should sing them Yeeeaaahhh!","lyrics_enabled":true,"meter":"3/4","name":"Default
+        Arrangement","notes":"Some test notes!","number_chart_enabled":false,"numeral_chart_enabled":false,"print_margin":"0.5in","print_orientation":"Portrait","print_page_size":"Letter","sequence":["Verse
+        1","Instrumental","Verse 2","Instrumental"],"sequence_short":["V1","Inst","V2","Inst"],"updated_at":"2018-09-29T11:26:38Z"},"relationships":{"updated_by":{"data":{"type":"Person","id":"40135868"}},"created_by":{"data":{"type":"Person","id":"40135868"}},"song":{"data":{"type":"Song","id":"16194010"}}},"links":{"assign_tags":"https://api.planningcenteronline.com/services/v2/songs/16194010/arrangements/18435232/assign_tags","attachments":"https://api.planningcenteronline.com/services/v2/songs/16194010/arrangements/18435232/attachments","keys":"https://api.planningcenteronline.com/services/v2/songs/16194010/arrangements/18435232/keys","sections":"https://api.planningcenteronline.com/services/v2/songs/16194010/arrangements/18435232/sections","tags":"https://api.planningcenteronline.com/services/v2/songs/16194010/arrangements/18435232/tags","self":"https://api.planningcenteronline.com/services/v2/songs/16194010/arrangements/18435232"}},"included":[],"meta":{"can_include":["sections"],"parent":{"id":"16194010","type":"Song"}}}'}
+    headers:
+      Access-Control-Allow-Credentials: ['true']
+      Access-Control-Allow-Headers: ['Accept, Authorization, Content-Type, If-Match,
+          If-Modified-Since, If-None-Match, If-Unmodified-Since, Origin, X-Requested-With,
+          X-CSRF-Token']
+      Access-Control-Allow-Methods: ['GET, POST, PATCH, PUT, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Expose-Headers: ['ETag, Link, X-PCO-API-Auth-Method']
+      Cache-Control: ['max-age=0, private, must-revalidate']
+      Connection: [keep-alive]
+      Content-Length: ['2284']
+      Content-Type: [application/vnd.api+json; charset=utf-8]
+      Date: ['Sat, 29 Sep 2018 12:56:21 GMT']
+      ETag: [W/"335acaded435f3d3008e742b8c95d1ab"]
+      Server: [nginx]
+      Strict-Transport-Security: [max-age=15552000]
+      Vary: ['Accept, Accept-Encoding, Origin']
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN]
+      X-PCO-API-Auth-Method: [HTTPBasic]
+      X-PCO-API-Request-Rate-Count: ['3']
+      X-PCO-API-Request-Rate-Limit: ['100']
+      X-PCO-API-Request-Rate-Period: [20 seconds]
+      X-Pco-Api-Processed-As-Version: ['2018-08-01']
+      X-Request-Id: [c1963659-8feb-47fa-ab66-1de515d5c520]
+      X-Runtime: ['0.095094']
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: https://api.planningcenteronline.com/services/v2/songs/16194010/arrangements/18435232/sections
+  response:
+    body: {string: '{"data":{"type":"ArrangementSections","id":"18435232","attributes":{"sections":[{"label":"Verse
+        1","lyrics":"This is a test This is another test\n\rThis is another test This
+        is the final test\n\rTest some more lyrics Test even more lyrics\n\rThese
+        are lyrics I like these lyrics!","breaks_at":null},{"label":"Verse 2","lyrics":"I
+        like these lyrics They are great lyrics\n\rEveryone should sing them Yeeeaaahhh!","breaks_at":null}]},"links":{"self":"https://api.planningcenteronline.com/services/v2/songs/16194010/arrangements/18435232/sections"}},"included":[],"meta":{"parent":{"id":"18435232","type":"Arrangement"}}}'}
+    headers:
+      Access-Control-Allow-Credentials: ['true']
+      Access-Control-Allow-Headers: ['Accept, Authorization, Content-Type, If-Match,
+          If-Modified-Since, If-None-Match, If-Unmodified-Since, Origin, X-Requested-With,
+          X-CSRF-Token']
+      Access-Control-Allow-Methods: ['GET, POST, PATCH, PUT, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Expose-Headers: ['ETag, Link, X-PCO-API-Auth-Method']
+      Cache-Control: ['max-age=0, private, must-revalidate']
+      Connection: [keep-alive]
+      Content-Length: ['618']
+      Content-Type: [application/vnd.api+json; charset=utf-8]
+      Date: ['Sat, 29 Sep 2018 12:56:21 GMT']
+      ETag: [W/"4b34137a44f06a4ae989b3fdee68d6e0"]
+      Server: [nginx]
+      Strict-Transport-Security: [max-age=15552000]
+      Vary: ['Accept, Accept-Encoding, Origin']
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN]
+      X-PCO-API-Auth-Method: [HTTPBasic]
+      X-PCO-API-Request-Rate-Count: ['4']
+      X-PCO-API-Request-Rate-Limit: ['100']
+      X-PCO-API-Request-Rate-Period: [20 seconds]
+      X-Pco-Api-Processed-As-Version: ['2018-08-01']
+      X-Request-Id: [81552e68-b548-4f09-b160-a9dc4e800596]
+      X-Runtime: ['0.099044']
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+version: 1

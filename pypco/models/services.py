@@ -13,7 +13,7 @@ class ServicesModel(BaseModel): pass
 
 # Services models
 class Arrangement(ServicesModel): ENDPOINT_NAME='songs'
-class ArrangementSections(ServicesModel): ENDPOINT_NAME='arrangements'
+class ArrangementSections(ServicesModel): ENDPOINT_NAME='songs'
 class Attachment(ServicesModel): ENDPOINT_NAME='attachments'
 class AttachmentActivity(ServicesModel): ENDPOINT_NAME='attachment_activities'
 class AttachmentType(ServicesModel): ENDPOINT_NAME='attachment_types'

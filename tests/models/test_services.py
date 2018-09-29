@@ -7,7 +7,7 @@ from requests import HTTPError
 from .. import BasePCOVCRTestCase
 import pypco
 
-class TestServies(BasePCOVCRTestCase):
+class TestServices(BasePCOVCRTestCase):
     """Test the Services model classes."""
 
     def test_list_arrangement_sections(self):
@@ -20,4 +20,5 @@ class TestServies(BasePCOVCRTestCase):
 
         sections = [sec for sec in arrangement.rel.sections.list()]
 
-        self.assertGreater(0, len(sections))
+        self.assertEqual(len(sections), 1)
+        self.assertEqual(sections[0].sections[0]['label'], 'Verse 1')
