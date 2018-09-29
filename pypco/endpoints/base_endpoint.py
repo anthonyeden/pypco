@@ -259,12 +259,23 @@ class BaseEndpoint:
             # Dispatch the request
             response = self.dispatch_single_request(url, params=query_params)
 
-            # Iterate through and return results
-            for obj in response['data']:
-                klass_info = self.resolve_model_type(obj)
+            # Some endpoints that can only be accessed with the "list" function
+            # (like ArrangementSections in Services), because you can't GET with
+            # an ID, require being able to handle dict response as below.
+            if type(response['data']) is dict:
+                klass_info = self.resolve_model_type(response['data'])
                 klass = getattr(globals()[klass_info[0]], klass_info[1])
 
-                yield klass(self, obj)
+                yield klass(self, response['data'])
+
+                break
+            
+            elif type(response['data']) is list:
+                for obj in response['data']:
+                    klass_info = self.resolve_model_type(obj)
+                    klass = getattr(globals()[klass_info[0]], klass_info[1])
+
+                    yield klass(self, obj)
 
             # Quit if we don't have further results
             if not 'next' in response['meta']:

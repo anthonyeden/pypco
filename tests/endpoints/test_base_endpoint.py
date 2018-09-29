@@ -3,12 +3,15 @@
 
 import unittest
 import json as jsonlib
-from unittest.mock import Mock, patch
+from unittest.mock import Mock, patch, MagicMock
 from pypco.endpoints import PCOAuthConfig
 from pypco.endpoints.base_endpoint import BaseEndpoint, NotValidRootEndpointError, PCOAPIMethod
 from pypco.endpoints.people import PeopleEndpoint, People, Addresses, Stats, FieldDefinitions
 from pypco.endpoints.check_ins import CheckInsEndpoint
+from pypco.endpoints.services import ServicesEndpoint, Songs
 from pypco.models.people import Person, Address, FieldDefinition, Email
+from pypco.models.services import Song,Arrangement,ArrangementSections
+from pypco import PCO
 from tests import BasePCOTestCase
 
 RL_REQ_COUNT = 0
@@ -402,7 +405,8 @@ class TestBaseEndpoint(BasePCOTestCase):
         #endregion
 
     @patch('pypco.endpoints.people.People.dispatch_single_request')
-    def test_people_list(self, mock_people_request):
+    @patch('pypco.endpoints.services.Songs.dispatch_single_request')
+    def test_multiple_endpoints_list(self, mock_songs_request, mock_people_request):
         """Test the list function to query endpoints."""
 
         people = PeopleEndpoint(PCOAuthConfig("app_id", "app_secret"), None)
@@ -974,6 +978,125 @@ class TestBaseEndpoint(BasePCOTestCase):
             ]
         )
         #endregion
+
+        #endregion
+
+        # Mock retrieving data with .list() when the endpoint
+        # returns a dict instead of a list (like Services/Songs/Arrangments/Sections)
+        #region
+
+        mock_songs_request.return_value = {
+            "data": {
+                "type": "ArrangementSections",
+                "id": "18435232",
+                "attributes": {
+                    "sections": [
+                        {
+                            "label": "Verse 1",
+                            "lyrics": "This is a test This is another test\n\rThis is another test This is the final test\n\rTest some more lyrics Test even more lyrics\n\rThese are lyrics I like these lyrics!",
+                            "breaks_at": None
+                        },
+                        {
+                            "label": "Verse 2",
+                            "lyrics": "I like these lyrics They are great lyrics\n\rEveryone should sing them Yeeeaaahhh!",
+                            "breaks_at": None
+                        }
+                    ]
+                },
+                "links": {
+                    "self": "https://api.planningcenteronline.com/services/v2/songs/16194010/arrangements/18435232/sections"
+                }
+            },
+            "included": [],
+            "meta": {
+                "parent": {
+                    "id": "18435232",
+                    "type": "Arrangement"
+                }
+            }
+        }
+
+        sample_arrangement_data = {
+            "type": "Arrangement",
+            "id": "18435232",
+            "attributes": {
+                "archived_at": None,
+                "bpm": 120,
+                "chord_chart": "VERSE 1\r\n\r\n[Dm]This is a test [Bb]This is another test\r\n[F]This is another test [C]This is the final test\r\n[Dm]Test some more lyrics [Bb]Test even more lyrics\r\n[F]These are lyrics [C]I like these lyrics!\r\n\r\nINSTRUMENTAL\r\n\r\n[Dm]    [Bb] [F] [C]\r\nVERSE 2\r\n\r\n[Dm]I like these lyrics [Bb]They are great    lyrics\r\n[F]Everyone should sing them [C]Yeeeaaahhh!",
+                "chord_chart_chord_color": 0,
+                "chord_chart_columns": 1,
+                "chord_chart_font": "Courier",
+                "chord_chart_font_size": 12,
+                "chord_chart_key": "Dm",
+                "created_at": "2018-09-25T10:47:19Z",
+                "has_chord_chart": True,
+                "has_chords": True,
+                "length": 180,
+                "lyrics": "VERSE    1\n\nThis is a test This is another test\nThis is another test This is the    final test\nTest some more lyrics Test even more lyrics\nThese are lyrics    I like these lyrics!\n\nINSTRUMENTAL\n\nVERSE 2\n\nI like these lyrics They    are great lyrics\nEveryone should sing them Yeeeaaahhh!",
+                "lyrics_enabled": True,
+                "meter": "3/4",
+                "name": "Default    Arrangement",
+                "notes": "Some test notes!",
+                "number_chart_enabled": False,
+                "numeral_chart_enabled": False,
+                "print_margin": "0.5in",
+                "print_orientation": "Portrait",
+                "print_page_size": "Letter",
+                "sequence": [
+                    "Verse    1",
+                    "Instrumental",
+                    "Verse 2",
+                    "Instrumental"
+                ],
+                "sequence_short": [
+                    "V1",
+                    "Inst",
+                    "V2",
+                    "Inst"
+                ],
+                "updated_at": "2018-09-29T11:26:38Z"
+            },
+            "relationships": {
+                "updated_by": {
+                    "data": {
+                        "type": "Person",
+                        "id": "40135868"
+                    }
+                },
+                "created_by": {
+                    "data": {
+                        "type": "Person",
+                        "id": "40135868"
+                    }
+                },
+                "song": {
+                    "data": {
+                        "type": "Song",
+                        "id": "16194010"
+                    }
+                }
+            },
+            "links": {
+                "assign_tags": "https://api.planningcenteronline.com/services/v2/songs/16194010/arrangements/18435232/assign_tags",
+                "attachments": "https://api.planningcenteronline.com/services/v2/songs/16194010/arrangements/18435232/attachments",
+                "keys": "https://api.planningcenteronline.com/services/v2/songs/16194010/arrangements/18435232/keys",
+                "sections": "https://api.planningcenteronline.com/services/v2/songs/16194010/arrangements/18435232/sections",
+                "tags": "https://api.planningcenteronline.com/services/v2/songs/16194010/arrangements/18435232/tags",
+                "self": "https://api.planningcenteronline.com/services/v2/songs/16194010/arrangements/18435232"
+            }
+        }
+
+        arrangement = Arrangement(
+            Songs(Mock(PCOAuthConfig), Mock(PCO)),
+            sample_arrangement_data,
+            user_created=False,
+            from_get=True
+        )
+
+        results = [result for result in arrangement.rel.sections.list()]
+
+        self.assertEqual(len(results), 1)
+        self.assertEqual(results[0].sections[0]['label'], 'Verse 1')
 
         #endregion
 
