@@ -68,8 +68,7 @@ class Attachment(ServicesModel):
 
 class AttachmentActivity(ServicesModel): pass
 class AttachmentType(ServicesModel): ENDPOINT_NAME='attachment_types'
-class AvailableSignup(ServicesModel): ENDPOINT_NAME='available_signups'
-class BackgroundCheck(ServicesModel): ENDPOINT_NAME='background_checks'
+class AvailableSignup(ServicesModel): ENDPOINT_NAME='people'
 class Blockout(ServicesModel): ENDPOINT_NAME='blockouts'
 class BlockoutDate(ServicesModel): ENDPOINT_NAME='blockout_dates'
 class BlockoutException(ServicesModel): ENDPOINT_NAME='blockout_exceptions'
@@ -87,8 +86,8 @@ class Layout(ServicesModel): ENDPOINT_NAME='layouts'
 class Media(ServicesModel): ENDPOINT_NAME='media'
 class MediaSchedule(ServicesModel): ENDPOINT_NAME='media_schedules'
 class NeededPosition(ServicesModel): ENDPOINT_NAME='needed_positions'
-class Organization(ServicesModel): ENDPOINT_NAME='organizations'
-class Peoples(ServicesModel): ENDPOINT_NAME='people'
+class Organization(ServicesModel): pass
+class Person(ServicesModel): ENDPOINT_NAME='people'
 class PersonTeamPositionAssignment(ServicesModel): ENDPOINT_NAME='person_tem_position_assignments'
 class Plan(ServicesModel): ENDPOINT_NAME='plans'
 class PlanNote(ServicesModel): ENDPOINT_NAME='plan_notes'
