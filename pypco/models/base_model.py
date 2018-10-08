@@ -578,6 +578,25 @@ class RelationManager():
         # resolve the correct endpoint
         return getattr(base_endpoint, model_class.ENDPOINT_NAME)
 
+class ActionWrapper():
+    """A wrapper class for performing actions on objects.
+
+    This technique allows actions to be specified as model properties
+    rather than as function arguments.
+
+    Examples manipulating objects with actions:
+
+    """
+
+    # TODO: Write Action Wrapper
+
+class ActionManager():
+    """Provides functions for initiating actions on objects."""
+
+    # TODO: Write Action Manager
+
+    pass
+
 class PCOModelStateError(Exception):
     """An exception representing a function call against a model that is
     in an invalid state."""
