@@ -7,15 +7,66 @@ subclassing the ServicesModel class.
 #pylint: disable=C0321,R0903,C0111
 
 from .base_model import BaseModel
+import pypco
 
-# The base people model
+# The base Services model
 class ServicesModel(BaseModel): pass
 
 # Services models
 class Arrangement(ServicesModel): ENDPOINT_NAME='songs'
 class ArrangementSections(ServicesModel): ENDPOINT_NAME='songs'
-class Attachment(ServicesModel): ENDPOINT_NAME='attachments'
-class AttachmentActivity(ServicesModel): ENDPOINT_NAME='attachment_activities'
+
+class Attachment(ServicesModel):
+    """Model class for Services attachments.
+
+    Adds open() and preview() functions, which return AttachmentActvity
+    that provide URLs for attachment files and previews.
+    """
+
+    ENDPOINT_NAME = 'media'
+
+    def __init__(self, endpoint, data=None, user_created=False, from_get=False):
+        """Initialize the model class.
+
+        Args:
+            endpoint (BaseEndpoint): The endpoint associated with this object.
+            data (dict): The dict from which to build object properties.
+            user_created (boolean): Was this model created by a user?
+            get (boolean): Was this model created by a direct get request?
+        """
+        super().__init__(endpoint, data=data, user_created=user_created, from_get=from_get)
+
+    def open(self):
+        """Perform the "open" action on the attachment.
+
+        Returns:
+            AttachmentType: An attachment type object corresponding to the "open" action.
+        """
+
+        return AttachmentActivity(
+            self._endpoint,
+            self._endpoint.dispatch_single_request(
+                '{}/open'.format(self.links['self']),
+                method=pypco.endpoints.base_endpoint.PCOAPIMethod.POST
+            )['data']
+        )
+
+    def preview(self):
+        """Perform the "preview" action on the attachment.
+
+        Returns:
+            AttachmentType: An attachment type object corresponding to the "preview" action.
+        """
+
+        return AttachmentActivity(
+            self._endpoint,
+            self._endpoint.dispatch_single_request(
+                '{}/preview'.format(self.links['self']),
+                method=pypco.endpoints.base_endpoint.PCOAPIMethod.POST
+            )['data']
+        )
+
+class AttachmentActivity(ServicesModel): pass
 class AttachmentType(ServicesModel): ENDPOINT_NAME='attachment_types'
 class AvailableSignup(ServicesModel): ENDPOINT_NAME='available_signups'
 class BackgroundCheck(ServicesModel): ENDPOINT_NAME='background_checks'
@@ -33,7 +84,7 @@ class ItemNoteCategorie(ServicesModel): ENDPOINT_NAME='item_note_categories'
 class ItemTime(ServicesModel): ENDPOINT_NAME='item_times'
 class Key(ServicesModel): ENDPOINT_NAME='keys'
 class Layout(ServicesModel): ENDPOINT_NAME='layouts'
-class Media(ServicesModel): ENDPOINT_NAME='medias'
+class Media(ServicesModel): ENDPOINT_NAME='media'
 class MediaSchedule(ServicesModel): ENDPOINT_NAME='media_schedules'
 class NeededPosition(ServicesModel): ENDPOINT_NAME='needed_positions'
 class Organization(ServicesModel): ENDPOINT_NAME='organizations'

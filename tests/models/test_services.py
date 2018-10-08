@@ -22,3 +22,37 @@ class TestServices(BasePCOVCRTestCase):
 
         self.assertEqual(len(sections), 1)
         self.assertEqual(sections[0].sections[0]['label'], 'Verse 1')
+
+    def test_list_media(self):
+        """Verify that we can list media."""
+
+        pco = self.pco
+
+        image = [media for media in pco.services.media.list()][0]
+
+        self.assertIsInstance(image, pypco.models.services.Media)
+        self.assertEqual(image.title, 'Field Image')
+        self.assertEqual(image.media_type_name, 'Background Image')
+
+    def test_attachment_activity(self):
+        """Test attachment activities--opening and previewing."""
+
+        pco = self.pco
+
+        image = [media for media in pco.services.media.list()][0]
+
+        self.assertIsInstance(image, pypco.models.services.Media)
+        self.assertEqual(image.title, 'Field Image')
+        self.assertEqual(image.media_type_name, 'Background Image')
+
+        attachment = [attachment for attachment in image.rel.attachments.list()][0]
+
+        attach_open = attachment.open()
+        self.assertIsInstance(attach_open, pypco.models.services.AttachmentActivity)
+        self.assertEqual('open', attach_open.activity_type)
+        self.assertIsInstance(attach_open.attachment_url, str)
+
+        attach_preview = attachment.preview()
+        self.assertIsInstance(attach_preview, pypco.models.services.AttachmentActivity)
+        self.assertEqual('preview', attach_preview.activity_type)
+        self.assertIsInstance(attach_preview.attachment_url, str)

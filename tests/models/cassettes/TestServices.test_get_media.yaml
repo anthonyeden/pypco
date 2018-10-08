@@ -1,0 +1,43 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: https://api.planningcenteronline.com/services/v2/media
+  response:
+    body: {string: '{"links":{"self":"https://api.planningcenteronline.com/services/v2/media"},"data":[{"type":"Media","id":"2360709","attributes":{"created_at":"2018-10-08T10:31:42Z","creator_name":null,"image_url":"https://s3.amazonaws.com/planning_center_production/attachment_thumbnails/thumbnails/9910509-1538994804/large.jpg","length":0,"media_type":"background_image","media_type_name":"Background
+        Image","preview_content_type":null,"preview_file_name":null,"preview_file_size":null,"preview_updated_at":null,"preview_url":null,"themes":null,"thumbnail_content_type":null,"thumbnail_file_name":null,"thumbnail_file_size":null,"thumbnail_updated_at":null,"thumbnail_url":"https://s3.amazonaws.com/planning_center_production/attachment_thumbnails/thumbnails/9910509-1538994804/medium.jpg","title":"Field
+        Image","updated_at":"2018-10-08T10:33:34Z"},"links":{"self":"https://api.planningcenteronline.com/services/v2/media/2360709"}}],"included":[],"meta":{"total_count":1,"count":1,"can_include":["attachments"],"can_filter":["audio","background_audio","background_image","background_video","countdown","document","drama","image","powerpoint","song_video","video"],"parent":{"id":"263468","type":"Organization"}}}'}
+    headers:
+      Access-Control-Allow-Credentials: ['true']
+      Access-Control-Allow-Headers: ['Accept, Authorization, Content-Type, If-Match,
+          If-Modified-Since, If-None-Match, If-Unmodified-Since, Origin, X-Requested-With,
+          X-CSRF-Token']
+      Access-Control-Allow-Methods: ['GET, POST, PATCH, PUT, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Expose-Headers: ['ETag, Link, X-PCO-API-Auth-Method']
+      Cache-Control: ['max-age=0, private, must-revalidate']
+      Connection: [keep-alive]
+      Content-Length: ['1196']
+      Content-Type: [application/vnd.api+json; charset=utf-8]
+      Date: ['Mon, 08 Oct 2018 10:34:11 GMT']
+      ETag: [W/"9bdc0468539d19d2faa1d607d0e17099"]
+      Server: [nginx]
+      Strict-Transport-Security: [max-age=15552000]
+      Vary: ['Accept, Accept-Encoding, Origin']
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN]
+      X-PCO-API-Auth-Method: [HTTPBasic]
+      X-PCO-API-Request-Rate-Count: ['1']
+      X-PCO-API-Request-Rate-Limit: ['100']
+      X-PCO-API-Request-Rate-Period: [20 seconds]
+      X-Pco-Api-Processed-As-Version: ['2018-08-01']
+      X-Request-Id: [d94f5229-a0e0-4d36-b6f3-0b5cbb0deb8b]
+      X-Runtime: ['0.051630']
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+version: 1

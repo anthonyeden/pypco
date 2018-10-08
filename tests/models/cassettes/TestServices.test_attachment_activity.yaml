@@ -1,0 +1,209 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: https://api.planningcenteronline.com/services/v2/media
+  response:
+    body: {string: '{"links":{"self":"https://api.planningcenteronline.com/services/v2/media"},"data":[{"type":"Media","id":"2360709","attributes":{"created_at":"2018-10-08T10:31:42Z","creator_name":null,"image_url":"https://s3.amazonaws.com/planning_center_production/attachment_thumbnails/thumbnails/9910509-1538994804/large.jpg","length":0,"media_type":"background_image","media_type_name":"Background
+        Image","preview_content_type":null,"preview_file_name":null,"preview_file_size":null,"preview_updated_at":null,"preview_url":null,"themes":null,"thumbnail_content_type":null,"thumbnail_file_name":null,"thumbnail_file_size":null,"thumbnail_updated_at":null,"thumbnail_url":"https://s3.amazonaws.com/planning_center_production/attachment_thumbnails/thumbnails/9910509-1538994804/medium.jpg","title":"Field
+        Image","updated_at":"2018-10-08T10:33:34Z"},"links":{"self":"https://api.planningcenteronline.com/services/v2/media/2360709"}}],"included":[],"meta":{"total_count":1,"count":1,"can_include":["attachments"],"can_filter":["audio","background_audio","background_image","background_video","countdown","document","drama","image","powerpoint","song_video","video"],"parent":{"id":"263468","type":"Organization"}}}'}
+    headers:
+      Access-Control-Allow-Credentials: ['true']
+      Access-Control-Allow-Headers: ['Accept, Authorization, Content-Type, If-Match,
+          If-Modified-Since, If-None-Match, If-Unmodified-Since, Origin, X-Requested-With,
+          X-CSRF-Token']
+      Access-Control-Allow-Methods: ['GET, POST, PATCH, PUT, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Expose-Headers: ['ETag, Link, X-PCO-API-Auth-Method']
+      Cache-Control: ['max-age=0, private, must-revalidate']
+      Connection: [keep-alive]
+      Content-Length: ['1196']
+      Content-Type: [application/vnd.api+json; charset=utf-8]
+      Date: ['Mon, 08 Oct 2018 11:30:00 GMT']
+      ETag: [W/"9bdc0468539d19d2faa1d607d0e17099"]
+      Server: [nginx]
+      Strict-Transport-Security: [max-age=15552000]
+      Vary: ['Accept, Accept-Encoding, Origin']
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN]
+      X-PCO-API-Auth-Method: [HTTPBasic]
+      X-PCO-API-Request-Rate-Count: ['1']
+      X-PCO-API-Request-Rate-Limit: ['100']
+      X-PCO-API-Request-Rate-Period: [20 seconds]
+      X-Pco-Api-Processed-As-Version: ['2018-08-01']
+      X-Request-Id: [c8b5a34b-a1d7-418d-9653-a3c2ca6f84c3]
+      X-Runtime: ['0.061107']
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: https://api.planningcenteronline.com/services/v2/media/2360709
+  response:
+    body: {string: '{"data":{"type":"Media","id":"2360709","attributes":{"created_at":"2018-10-08T10:31:42Z","creator_name":null,"image_url":"https://s3.amazonaws.com/planning_center_production/attachment_thumbnails/thumbnails/9910509-1538994804/large.jpg","length":0,"media_type":"background_image","media_type_name":"Background
+        Image","preview_content_type":null,"preview_file_name":null,"preview_file_size":null,"preview_updated_at":null,"preview_url":null,"themes":null,"thumbnail_content_type":null,"thumbnail_file_name":null,"thumbnail_file_size":null,"thumbnail_updated_at":null,"thumbnail_url":"https://s3.amazonaws.com/planning_center_production/attachment_thumbnails/thumbnails/9910509-1538994804/medium.jpg","title":"Field
+        Image","updated_at":"2018-10-08T10:33:34Z"},"links":{"assign_tags":"https://api.planningcenteronline.com/services/v2/media/2360709/assign_tags","attachments":"https://api.planningcenteronline.com/services/v2/media/2360709/attachments","media_schedules":"https://api.planningcenteronline.com/services/v2/media/2360709/media_schedules","tags":"https://api.planningcenteronline.com/services/v2/media/2360709/tags","self":"https://api.planningcenteronline.com/services/v2/media/2360709"}},"included":[],"meta":{"can_include":["attachments"],"parent":{"id":"263468","type":"Organization"}}}'}
+    headers:
+      Access-Control-Allow-Credentials: ['true']
+      Access-Control-Allow-Headers: ['Accept, Authorization, Content-Type, If-Match,
+          If-Modified-Since, If-None-Match, If-Unmodified-Since, Origin, X-Requested-With,
+          X-CSRF-Token']
+      Access-Control-Allow-Methods: ['GET, POST, PATCH, PUT, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Expose-Headers: ['ETag, Link, X-PCO-API-Auth-Method']
+      Cache-Control: ['max-age=0, private, must-revalidate']
+      Connection: [keep-alive]
+      Content-Length: ['1299']
+      Content-Type: [application/vnd.api+json; charset=utf-8]
+      Date: ['Mon, 08 Oct 2018 11:30:01 GMT']
+      ETag: [W/"7995268a474fce351608c7b520227ce4"]
+      Server: [nginx]
+      Strict-Transport-Security: [max-age=15552000]
+      Vary: ['Accept, Accept-Encoding, Origin']
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN]
+      X-PCO-API-Auth-Method: [HTTPBasic]
+      X-PCO-API-Request-Rate-Count: ['2']
+      X-PCO-API-Request-Rate-Limit: ['100']
+      X-PCO-API-Request-Rate-Period: [20 seconds]
+      X-Pco-Api-Processed-As-Version: ['2018-08-01']
+      X-Request-Id: [0fd74d37-4865-40c9-98a0-084e2ecca70e]
+      X-Runtime: ['0.047321']
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: https://api.planningcenteronline.com/services/v2/media/2360709/attachments
+  response:
+    body: {string: '{"links":{"self":"https://api.planningcenteronline.com/services/v2/media/2360709/attachments"},"data":[{"type":"Attachment","id":"72675483","attributes":{"allow_mp3_download":false,"content_type":"image/jpeg","created_at":"2018-10-08T10:33:19Z","downloadable":true,"file_size":1910504,"filename":"agriculture-arid-bright-46160.jpg","has_preview":true,"linked_url":"https://services.planningcenteronline.com/medias/2360709","page_order":[],"pco_type":"AttachmentS3","remote_link":"c3888ecc31ca74b94fd7810836296317","streamable":false,"thumbnail_url":"https://s3.amazonaws.com/planning_center_production/attachment_thumbnails/thumbnails/9910509-1538994804/medium.jpg","transposable":false,"updated_at":"2018-10-08T10:33:20Z","url":"https://services.planningcenteronline.com/attachments/72675483","web_streamable":false},"relationships":{"attachable":{"data":{"type":"Media","id":"2360709"}},"attachment_types":{"data":[]},"created_by":{"data":{"type":"Person","id":"40135868"}},"updated_by":{"data":{"type":"Person","id":"40135868"}}},"links":{"self":"https://api.planningcenteronline.com/services/v2/media/2360709/attachments/72675483"}}],"included":[],"meta":{"total_count":1,"count":1,"can_include":["zooms"],"parent":{"id":"2360709","type":"Media"}}}'}
+    headers:
+      Access-Control-Allow-Credentials: ['true']
+      Access-Control-Allow-Headers: ['Accept, Authorization, Content-Type, If-Match,
+          If-Modified-Since, If-None-Match, If-Unmodified-Since, Origin, X-Requested-With,
+          X-CSRF-Token']
+      Access-Control-Allow-Methods: ['GET, POST, PATCH, PUT, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Expose-Headers: ['ETag, Link, X-PCO-API-Auth-Method']
+      Cache-Control: ['max-age=0, private, must-revalidate']
+      Connection: [keep-alive]
+      Content-Length: ['1252']
+      Content-Type: [application/vnd.api+json; charset=utf-8]
+      Date: ['Mon, 08 Oct 2018 11:30:01 GMT']
+      ETag: [W/"d62cf0e05822df3ca9651949ba531282"]
+      Server: [nginx]
+      Strict-Transport-Security: [max-age=15552000]
+      Vary: ['Accept, Accept-Encoding, Origin']
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN]
+      X-PCO-API-Auth-Method: [HTTPBasic]
+      X-PCO-API-Request-Rate-Count: ['3']
+      X-PCO-API-Request-Rate-Limit: ['100']
+      X-PCO-API-Request-Rate-Period: [20 seconds]
+      X-Pco-Api-Processed-As-Version: ['2018-08-01']
+      X-Request-Id: [659627cc-84ed-48a2-bd6c-5aecc1a21a22]
+      X-Runtime: ['0.060153']
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: https://api.planningcenteronline.com/services/v2/media/2360709/attachments/72675483/open
+  response:
+    body: {string: '{"data":{"type":"AttachmentActivity","id":"1080948562","attributes":{"activity_type":"open","attachment_url":"https://s3.amazonaws.com/planning_center/c3888ecc31ca74b94fd7810836296317?response-content-disposition=attachment%3B%20filename%3D%22agriculture-arid-bright-46160.jpg%22%3B%20filename%2A%3DUTF-8%27%27agriculture-arid-bright-46160.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJDLVAQB5O4UL2REA%2F20181008%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20181008T113001Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=cc7dc11c785f46a6a996af8d9e807e8007291e4945c579f0a261381adbdda385","date":"2018-10-08"},"relationships":{"attachment":{"data":{"type":"Attachment","id":"72675483"}}},"links":{}},"included":[],"meta":{}}'}
+    headers:
+      Access-Control-Allow-Credentials: ['true']
+      Access-Control-Allow-Headers: ['Accept, Authorization, Content-Type, If-Match,
+          If-Modified-Since, If-None-Match, If-Unmodified-Since, Origin, X-Requested-With,
+          X-CSRF-Token']
+      Access-Control-Allow-Methods: ['GET, POST, PATCH, PUT, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Expose-Headers: ['ETag, Link, X-PCO-API-Auth-Method']
+      Cache-Control: ['max-age=0, private, must-revalidate']
+      Connection: [keep-alive]
+      Content-Length: ['782']
+      Content-Type: [application/vnd.api+json; charset=utf-8]
+      Date: ['Mon, 08 Oct 2018 11:30:01 GMT']
+      ETag: [W/"b304ed26b2a35befb1c2b90d1d4146af", W/"b304ed26b2a35befb1c2b90d1d4146af"]
+      Etag: [W/"b304ed26b2a35befb1c2b90d1d4146af", W/"b304ed26b2a35befb1c2b90d1d4146af"]
+      Server: [nginx]
+      Set-Cookie: [request_method=POST; path=/; secure]
+      Strict-Transport-Security: [max-age=15552000]
+      Vary: ['Accept, Accept-Encoding, Origin']
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN]
+      X-PCO-API-Auth-Method: [HTTPBasic]
+      X-PCO-API-Request-Rate-Count: ['4']
+      X-PCO-API-Request-Rate-Limit: ['100']
+      X-PCO-API-Request-Rate-Period: [20 seconds]
+      X-Pco-Api-Processed-As-Version: ['2018-08-01']
+      X-Request-Id: [70efe9d9-52e1-4b75-9148-128d7efccc1c]
+      X-Runtime: ['0.109690']
+      X-XSS-Protection: [1; mode=block, 1; mode=block]
+      X-Xss-Protection: [1; mode=block, 1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: https://api.planningcenteronline.com/services/v2/media/2360709/attachments/72675483/preview
+  response:
+    body: {string: '{"data":{"type":"AttachmentActivity","id":"1080948562","attributes":{"activity_type":"preview","attachment_url":"https://s3.amazonaws.com/planning_center_production/attachment_thumbnails/thumbnails/9910509-1538994804/large.jpg","date":"2018-10-08"},"relationships":{"attachment":{"data":{"type":"Attachment","id":"72675483"}}},"links":{}},"included":[],"meta":{}}'}
+    headers:
+      Access-Control-Allow-Credentials: ['true']
+      Access-Control-Allow-Headers: ['Accept, Authorization, Content-Type, If-Match,
+          If-Modified-Since, If-None-Match, If-Unmodified-Since, Origin, X-Requested-With,
+          X-CSRF-Token']
+      Access-Control-Allow-Methods: ['GET, POST, PATCH, PUT, DELETE, OPTIONS']
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Expose-Headers: ['ETag, Link, X-PCO-API-Auth-Method']
+      Cache-Control: ['max-age=0, private, must-revalidate']
+      Connection: [keep-alive]
+      Content-Length: ['363']
+      Content-Type: [application/vnd.api+json; charset=utf-8]
+      Date: ['Mon, 08 Oct 2018 11:30:01 GMT']
+      ETag: [W/"ab9718d0fee8bdc0d65fa04138da0f1c", W/"ab9718d0fee8bdc0d65fa04138da0f1c"]
+      Etag: [W/"ab9718d0fee8bdc0d65fa04138da0f1c", W/"ab9718d0fee8bdc0d65fa04138da0f1c"]
+      Server: [nginx]
+      Set-Cookie: [request_method=POST; path=/; secure]
+      Strict-Transport-Security: [max-age=15552000]
+      Vary: ['Accept, Accept-Encoding, Origin']
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN]
+      X-PCO-API-Auth-Method: [HTTPBasic]
+      X-PCO-API-Request-Rate-Count: ['5']
+      X-PCO-API-Request-Rate-Limit: ['100']
+      X-PCO-API-Request-Rate-Period: [20 seconds]
+      X-Pco-Api-Processed-As-Version: ['2018-08-01']
+      X-Request-Id: [954907a1-5dbe-4a49-ba4f-76266e2bef2f]
+      X-Runtime: ['0.064831']
+      X-XSS-Protection: [1; mode=block, 1; mode=block]
+      X-Xss-Protection: [1; mode=block, 1; mode=block]
+    status: {code: 200, message: OK}
+version: 1
